@@ -3,7 +3,7 @@ import cors from"cors";
 import hpp from "helmet";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
-import ratelinit from "express-rate-limit";
+import rateLimit from "express-rate-limit";
 import mongoose from "mongoose";
 
 const app =express();
@@ -26,7 +26,7 @@ app.set("etag",false)
 mongoose.connect("http://mongodb.connect",{autoIndex:true}).then(()=>{
     console.log("Database connected");
 }).catch((err)=>{
-    console.log("Database connection error")
+    console.log("Database connection error"+err)
 });
 
 app.listen(5000,()=>{

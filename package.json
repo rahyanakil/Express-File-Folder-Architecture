@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "conceptual class",
   "main": "index.js",
+  "type":"module",
   "scripts": {
-    "test": "."
+    "start": "nodemon index.js",
+    "test": ""
+    
   },
   "repository": {
     "type": "git",
