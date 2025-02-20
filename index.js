@@ -18,3 +18,13 @@ app.use(cookieParser())//client site er cookie gula k parse korar jonno cookie p
 //express rate limit er kaj ki ?(5 min e 500 ta request )
 const limiter =rateLimit({windowMs: 5*60*1000,max:500})
 app.use(limiter)
+
+// setting web caching
+app.set("etag",false)
+
+// setting up mongo db
+mongoose.connect("http://mongodb.connect",{autoIndex:true}).then(()=>{
+    console.log("Database connected");
+}).catch((err)=>{
+    console.log("Database connection error")
+})
