@@ -5,6 +5,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 import mongoose from "mongoose";
+import { PORT } from "./app/config/config";
 
 const app =express();
 // Global Application Middleware
@@ -29,6 +30,6 @@ mongoose.connect("http://mongodb.connect",{autoIndex:true}).then(()=>{
     console.log("Database connection error"+err)
 });
 
-app.listen(5000,()=>{
+app.listen(PORT,()=>{
     console.log("server runing on",5000)
 })
