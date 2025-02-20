@@ -1,0 +1,5 @@
+1. npm init -y
+2. npm install cookie-parser cors express-rate-limit helmet hpp jsonwebtoken mongoose nodemailer nodemon
+3. create root files: index.js
+4. create root folder:routes, app-->controllers,middlewires,utility,routes,models
+5. import the packages in index.js root file
